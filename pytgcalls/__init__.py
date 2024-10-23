@@ -9,6 +9,5 @@ __all__ = (
     'compose',
     'CustomApi',
     'PyTgCalls',
-    'StreamType',
     'idle',
 )
