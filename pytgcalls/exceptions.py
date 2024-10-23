@@ -198,3 +198,26 @@ class MTProtoClientNotConnected(Exception):
         super().__init__(
             'MTProto client not connected',
         )
+
+class FFmpegNotInstalled(Exception):
+    """FFmpeg isn't installed, this error is raised by
+    :meth:`~pytgcalls.PyTgCalls.join_group_call` or
+    :meth:`~pytgcalls.PyTgCalls.change_stream`
+    """
+
+    def __init__(self, path: str):
+        super().__init__(
+            'FFmpeg ins\'t installed on your server',
+        )
+
+
+class RTMPStreamNeeded(Exception):
+    """Needed an RTMP Stream, raised by
+    :meth:`~pytgcalls.PyTgCalls.join_group_call`
+    """
+
+    def __init__(self):
+        super().__init__(
+            'Needed an RTMP Stream',
+        )
+
