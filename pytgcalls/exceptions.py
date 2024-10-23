@@ -86,6 +86,18 @@ class NotInCallError(Exception):
         )
 
 
+class TelegramServerError(Exception):
+    """Telegram Server is having some
+    internal problems, raised by
+    :meth:`~pytgcalls.PyTgCalls.join_group_call`
+    """
+
+    def __init__(self):
+        super().__init__(
+            'Telegram Server is having some '
+            'internal problems',
+        )
+        
 class AlreadyJoinedError(Exception):
     def __init__(self):
         super().__init__(
