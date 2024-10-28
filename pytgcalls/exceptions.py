@@ -153,6 +153,20 @@ class NoAudioSourceFound(Exception):
         )
 
 
+class TelegramServerError(Exception):
+    """Telegram Server is having some
+    internal problems, raised by
+    :meth:`~pytgcalls.PyTgCalls.join_group_call`
+    """
+
+    def __init__(self):
+        super().__init__(
+            'Telegram Server is having some '
+            'internal problems',
+        )
+
+
+
 class ImageSourceFound(Exception):
     def __init__(self, path: str):
         super().__init__(
